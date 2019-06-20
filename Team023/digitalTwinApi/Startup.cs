@@ -59,8 +59,8 @@ namespace digitalTwinApi
             });
 
             services.AddDbContext<DigitalTwinContext>(options =>
-                options.UseNpgsql("Server=localhost;Port=5432;Database=digitaltwin;User Id=postgres;Password=admin"));
-                //options.UseNpgsql("Server=digitaltwindb.postgres.database.azure.com;Database=digitaltwin;Port=5432;User Id=djamadmin@digitaltwindb;Password=Welkom2019!"));
+                //options.UseNpgsql("Server=localhost;Port=5432;Database=digitaltwin;User Id=postgres;Password=admin"));
+                options.UseNpgsql("Server=digitaltwindb.postgres.database.azure.com;Database=digitaltwin;Port=5432;User Id=djamadmin@digitaltwindb;Password=Welkom2019!"));
             
             services.AddSignalR()
                 .AddJsonProtocol(options =>
